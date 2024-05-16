@@ -1,5 +1,19 @@
 # diary-py
 
+## Frontend
+
+http://localhost:5173
+
+ライブラリをインストールする
+```shell
+npm install
+```
+
+サーバーを起動する
+```shell
+npm run dev
+```
+
 ## Backend
 
 http://localhost:8000/docs
