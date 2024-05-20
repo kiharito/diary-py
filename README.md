@@ -1,18 +1,30 @@
 # diary-py
 
+## Tasks
+
+実行するには`go-task`のインストールが必要
+```shell
+brew install go-task
+```
+
+必要なライブラリをまとめてインストールする
+```shell
+task install
+```
+
+frontendサーバーを起動する
+```shell
+task up-fe
+```
+
+backendサーバーを起動する
+```shell
+task up-be
+```
+
 ## Frontend
 
 http://localhost:5173
-
-ライブラリをインストールする
-```shell
-npm install
-```
-
-サーバーを起動する
-```shell
-npm run dev
-```
 
 ## Backend
 
@@ -21,24 +33,4 @@ http://localhost:8000/docs
 新しい仮想環境を作成する
 ```shell
 python -m venv .venv
-```
-
-仮想環境をアクティベートする
-```shell
-source .venv/bin/activate
-```
-
-仮想環境を閉じる
-```shell
-deactivate
-```
-
-ライブラリをインストールする
-```shell
-poetry install --no-root
-```
-
-サーバーを起動する
-```shell
-uvicorn app.main:app --reload
 ```
