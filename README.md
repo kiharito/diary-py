@@ -7,24 +7,19 @@
 brew install go-task
 ```
 
+アプリケーション実行環境の初期設定を行う
+```shell
+task init
+```
+
 必要なライブラリをまとめてインストールする
 ```shell
 task install
 ```
 
-frontend/backendサーバーを両方起動する
+アプリケーションを起動する
 ```shell
 task up
-```
-
-frontendサーバーを起動する
-```shell
-task up-fe
-```
-
-backendサーバーを起動する
-```shell
-task up-be
 ```
 
 ## Frontend
@@ -34,8 +29,3 @@ http://localhost:5173
 ## Backend
 
 http://localhost:8000/docs
-
-新しい仮想環境を作成する
-```shell
-python -m venv .venv
-```
