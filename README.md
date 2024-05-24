@@ -12,6 +12,11 @@ brew install go-task
 task install
 ```
 
+frontend/backendサーバーを両方起動する
+```shell
+task up
+```
+
 frontendサーバーを起動する
 ```shell
 task up-fe
