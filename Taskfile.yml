@@ -1,26 +1,48 @@
-version: '3'
+version: "3"
+
 tasks:
   up-frontend:
     aliases: [up-fe]
     dir: ./frontend
     cmds:
       - npm run dev
+
   up-backend:
     aliases: [up-be]
     dir: ./backend
     cmds:
-      - source .venv/bin/activate && uvicorn app.main:app --reload && deactivate
+      - |-
+        source .venv/bin/activate
+        uvicorn app.main:app --reload
+
   up:
     deps: [up-frontend, up-backend]
+
   install-frontend:
     dir: ./frontend
     cmds:
       - npm install
+
   install-backend:
     dir: ./backend
     cmds:
-      - source .venv/bin/activate && poetry install --no-root && deactivate
+      - |-
+        source .venv/bin/activate
+        poetry install --no-root
+
   install:
     cmds:
       - task: install-frontend
       - task: install-backend
+
+  init-backend:
+    dir: ./backend
+    cmds:
+      - python -m venv .venv
+      - |-
+        source .venv/bin/activate
+        pip install poetry
+
+  init:
+    cmds:
+      - task: init-backend
