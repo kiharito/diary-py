@@ -10,6 +10,8 @@ tasks:
     dir: ./backend
     cmds:
       - source .venv/bin/activate && uvicorn app.main:app --reload && deactivate
+  up:
+    deps: [up-frontend, up-backend]
   install-frontend:
     dir: ./frontend
     cmds:
